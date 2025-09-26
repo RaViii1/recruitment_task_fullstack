@@ -1,0 +1,276 @@
+
+.kantor-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  min-height: 100vh;
+}
+
+.kantor-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding: 2rem 0;
+}
+
+.kantor-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0 0 0.5rem 0;
+  background: linear-gradient(135deg, #1e40af, #3b82f6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 2px 4px rgba(30, 41, 59, 0.1);
+}
+
+.kantor-subtitle {
+  font-size: 1.1rem;
+  color: #64748b;
+  font-weight: 500;
+}
+
+.kantor-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 3rem;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+.loading-spinner {
+  width: 24px;
+  height: 24px;
+  border: 3px solid #e2e8f0;
+  border-top: 3px solid #3b82f6;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.kantor-loading span {
+  color: #64748b;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.kantor-error {
+  background: linear-gradient(135deg, #fef2f2, #fee2e2);
+  border: 1px solid #fca5a5;
+  color: #dc2626;
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  font-weight: 500;
+  text-align: center;
+  box-shadow: 0 4px 6px -1px rgba(220, 38, 38, 0.1);
+}
+
+.kantor-content {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e2e8f0;
+}
+
+.kantor-table-wrapper {
+  overflow-x: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #cbd5e1 #f1f5f9;
+}
+
+.kantor-table-wrapper::-webkit-scrollbar {
+  height: 8px;
+}
+
+.kantor-table-wrapper::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+.kantor-table-wrapper::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+.kantor-table-wrapper::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+.kantor-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+.kantor-table thead {
+  background: linear-gradient(135deg, #1e40af, #3b82f6);
+  color: white;
+}
+
+.kantor-table th {
+  padding: 1.25rem 1.5rem;
+  text-align: left;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 2px solid #1e40af;
+}
+
+.kantor-table th:first-child {
+  border-top-left-radius: 0;
+}
+
+.kantor-table th:last-child {
+  border-top-right-radius: 0;
+}
+
+.kantor-row {
+  transition: all 0.2s ease;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.kantor-row:hover {
+  background: linear-gradient(135deg, #f8fafc, #f1f5f9);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.kantor-row:last-child {
+  border-bottom: none;
+}
+
+.kantor-table td {
+  padding: 1.25rem 1.5rem;
+  vertical-align: middle;
+  font-weight: 500;
+}
+
+.currency-code {
+  font-weight: 700;
+  color: #1e293b;
+  font-size: 1rem;
+}
+
+.currency-flag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 32px;
+  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+  color: white;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 4px rgba(59, 130, 246, 0.3);
+}
+
+.rate-buy {
+  color: #059669;
+  font-weight: 600;
+  font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Roboto Mono', monospace;
+}
+
+.rate-sell {
+  color: #dc2626;
+  font-weight: 600;
+  font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Roboto Mono', monospace;
+}
+
+.rate-historical {
+  color: #6366f1;
+  font-weight: 600;
+  font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Roboto Mono', monospace;
+}
+
+.loading-text {
+  color: #94a3b8;
+  font-style: italic;
+  font-weight: 400;
+}
+
+.kantor-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 0.85rem;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 4px rgba(59, 130, 246, 0.3);
+}
+
+.kantor-link:hover {
+  background: linear-gradient(135deg, #1d4ed8, #1e40af);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(59, 130, 246, 0.4);
+  text-decoration: none;
+  color: white;
+}
+
+.kantor-link:active {
+  transform: translateY(0);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .kantor-container {
+    padding: 1rem;
+  }
+  
+  .kantor-title {
+    font-size: 2rem;
+  }
+  
+  .kantor-table th,
+  .kantor-table td {
+    padding: 1rem 0.75rem;
+    font-size: 0.85rem;
+  }
+  
+  .currency-flag {
+    width: 40px;
+    height: 28px;
+    font-size: 0.7rem;
+  }
+  
+  .kantor-link {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .kantor-table th,
+  .kantor-table td {
+    padding: 0.75rem 0.5rem;
+    font-size: 0.8rem;
+  }
+  
+  .kantor-title {
+    font-size: 1.75rem;
+  }
+  
+  .currency-flag {
+    width: 36px;
+    height: 24px;
+    font-size: 0.65rem;
+  }
+}
